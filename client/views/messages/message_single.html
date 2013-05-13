@@ -1,8 +1,9 @@
 <template name="messageSingle">
-	<div class="single-message">
+	<div class="single-message" id="{{_id}}">
 		<div class="message-content">
-			<p>“{{content}}”</p>
+			
+			<p>“{{content}} ”</p>
 		</div> <!--  .message-content -->
-		<p class="name">{{name}}</p> <!--  .name -->
+		<p class="name">{{name}} <a href="/#{{_id}}">Permalink</a></p> <!--  .name -->
 	</div> <!--  .single-message -->
 </template>

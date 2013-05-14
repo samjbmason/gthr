@@ -1,6 +1,10 @@
 <template name="header">
 	<header class="site-header">
     <h1>GTHR @ 229 Creative</h1>
-		{{loginButtons}}
+    {{#if locationCheck}}
+			{{loginButtons}}
+		{{else}}
+			<p>Your are out of the vicinity</p>
+		{{/if}}
   </header>
 </template>

@@ -2,19 +2,9 @@
 	<header class="site-header">
     <h5>GTHR @ 229 Creative</h5>
 
-    	{{#if isLoading}}
-	   		{{> loading}}
-	   	{{else}}
-		    {{#if locationCheck}}
+		<div class="access-wrap">
 					{{loginButtons}}
-				{{else}}
-					<p>Your are out of the vicinity</p>
-				{{/if}}
-			{{/if}}
-			
-    {{#unless geoEnabled}}
-			<p>Enable Geo Location</p>
-    {{/unless}}
+    </div> <!--  .access-wrap -->
 
 	   	
   </header>

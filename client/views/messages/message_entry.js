@@ -9,6 +9,7 @@ Template.messageEntry.events({
 		Meteor.call('postMessage',message,function(error,id) {
 			if (error)
       	return alert(error.reason);
+      $(event.target).find('[name=content]').val("")
 		}); 
 
 	}

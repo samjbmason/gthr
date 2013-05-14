@@ -1,8 +1,8 @@
 <template name="header">
 	<header class="site-header">
-    <h1>GTHR @ 229 Creative</h1>
-    {{#if isGeoAllowed}}
-	   	{{#if isLoading}}
+    <h5>GTHR @ 229 Creative</h5>
+
+    	{{#if isLoading}}
 	   		{{> loading}}
 	   	{{else}}
 		    {{#if locationCheck}}
@@ -11,12 +11,11 @@
 					<p>Your are out of the vicinity</p>
 				{{/if}}
 			{{/if}}
-		{{else}}
-			{{#if geoDenied}}
-				<p>You need to give location permission</p>
-			{{else}}
-				<p>Waiting for permission to be given</p>
-			{{/if}}
-		{{/if}}
+			
+    {{#unless geoEnabled}}
+			<p>Enable Geo Location</p>
+    {{/unless}}
+
+	   	
   </header>
 </template>

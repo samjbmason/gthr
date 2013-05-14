@@ -1,24 +1,20 @@
 Template.header.helpers({
+	isLoading: function() {
+    return Session.equals("locationCheck",undefined); 
+  },
   locationCheck: function() {
     return Session.get("locationCheck");
   },
-  isLoading: function() {
-    return Session.equals("locationCheck",undefined); 
-  },
-  isGeoAllowed: function() {
-  	return Session.get("geoPermissions");
-  },
-  geoDenied: function() {
-  	return Session.get("geoDenied");
+  geoEnabled: function() {
+  	return Session.get("geoEnabled");
   }
 });
 
 Template.header.created = function() {
-	Session.setDeafult
 	navigator.geolocation.getCurrentPosition(success_callback,error_callback);
 		
 	function success_callback(p){
-		Session.set("geoPermissions",true);
+		Session.set("geoEnabled",true);
 		// Building Latitude = 51.522206
 		// Building Longitude = -0.078305
 		var lat = parseFloat(p.coords.latitude);
@@ -32,6 +28,6 @@ Template.header.created = function() {
 	}
 
 	function error_callback(p){
-	     Session.set("geoDenied",true);
+	  Session.set("geoEnabled",false);
 	}
 }

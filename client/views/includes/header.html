@@ -1,10 +1,22 @@
 <template name="header">
 	<header class="site-header">
     <h1>GTHR @ 229 Creative</h1>
-    {{#if locationCheck "correct"}}
-			{{loginButtons}}
+    {{#if isGeoAllowed}}
+	   	{{#if isLoading}}
+	   		{{> loading}}
+	   	{{else}}
+		    {{#if locationCheck}}
+					{{loginButtons}}
+				{{else}}
+					<p>Your are out of the vicinity</p>
+				{{/if}}
+			{{/if}}
 		{{else}}
-			<p>Your are out of the vicinity</p>
+			{{#if geoDenied}}
+				<p>You need to give location permission</p>
+			{{else}}
+				<p>Waiting for permission to be given</p>
+			{{/if}}
 		{{/if}}
   </header>
 </template>

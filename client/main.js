@@ -1,1 +1,1 @@
-Meteor.subscribe('messages');
+messagesHandle= Meteor.subscribeWithPagination('messages',200);

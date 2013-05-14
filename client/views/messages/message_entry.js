@@ -6,7 +6,10 @@ Template.messageEntry.events({
 			content: $(event.target).find('[name=content]').val()
 		}
 
-		message._id = Messages.insert(message);
-		Meteor.Router.to('messagesList');
+		Meteor.call('postMessage',message,function(error,id) {
+			if (error)
+      	return alert(error.reason);
+		}); 
+
 	}
 });

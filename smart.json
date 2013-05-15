@@ -6,6 +6,7 @@
   "packages": {
     "router": {},
     "spin": {},
-    "paginated-subscription": {}
+    "paginated-subscription": {},
+    "presence": {}
   }
 }

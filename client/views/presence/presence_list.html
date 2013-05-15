@@ -1,0 +1,6 @@
+<template name="presenceList">
+	<h1>{{onlineCount}}</h1>
+	{{#each onlineUsers}}
+		{{> presenceSingle}}
+	{{/each}}
+</template>

@@ -18,7 +18,7 @@ Template.messageEntry.events({
 			if (error) {
       	throwError(error.reason);
       } else {
-      	$(event.target).find('[name=content]').val("");
+      	$(event.target).find('[name=content]').val("").focus();
     	}
 		}); 
 

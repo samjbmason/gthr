@@ -1,5 +1,6 @@
 Meteor.Router.add({
-  '/': 'messagesList'
+  '/': 'messagesList',
+  '/about': 'aboutPage'
 });
 
 Meteor.Router.filters({

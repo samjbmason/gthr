@@ -1,5 +1,5 @@
 Meteor.Router.add({
-  '/': 'messagesList',
+  '/': 'chatPage',
   '/about': 'aboutPage'
 });
 
@@ -18,5 +18,5 @@ Meteor.Router.filters({
   }
 });
 
-Meteor.Router.filter('requireLogin', {only: 'messagesList'});
+Meteor.Router.filter('requireLogin', {only: 'chatPage'});
 Meteor.Router.filter('clearErrors');

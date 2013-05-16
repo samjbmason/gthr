@@ -1,10 +1,9 @@
-Deps.autorun(function() {
-  console.log("There are " + Meteor.presences.find().count() + " users online");
-});
-
 Template.presenceList.helpers({
 	onlineUsers: function() {
-		return Meteor.presences.find();
+		var users = _.map(Meteor.presences.find().fetch(), function(user) { 
+    	return Meteor.users.findOne({_id :user.userId})
+  	});
+  	return users;
 	},
 	onlineCount: function() {
 		return Meteor.presences.find().count();

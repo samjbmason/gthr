@@ -3,5 +3,11 @@ Meteor.publish('messages', function(limit) {
 });
 
 Meteor.publish('userPresence', function() {
-	return Meteor.presences.find({}, {fields: {state: true, userId: true}});
+	return Meteor.presences.find({ userId: { $exists: true}}); 
 });
+
+Meteor.publish('users', function() { 
+return Meteor.users.find(); 
+});
+
+Meteor.users.deny({update: function () { return true; }})

@@ -1,3 +1,7 @@
 messagesHandle= Meteor.subscribeWithPagination('messages',200);
 
-Meteor.subscribe('userPresence');
+Meteor.subscribe('users');
+
+Meteor.startup(function () {
+		Meteor.subscribe('userPresence'); 
+}); 

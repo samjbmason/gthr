@@ -1,14 +1,1 @@
-.access-wrap {
-	border: 1px solid red;
-}
-
-.single-message {
-	-webkit-transition: all 0.3s 0 ease-in;  /* Chrome 1-25, Safari 3.2+ */
-     -moz-transition: all 0.3s 0 ease-in;  /* Firefox 4-15 */
-       -o-transition: all 0.3s 0 ease-in;  /* Opera 10.50–12.00 */
-          transition: all 0.3s 0 ease-in;
-}
-
-.invisible {
-	opacity: 0;
-}
+.access-wrap{border:1px solid red}.single-message{-webkit-transition:all 0.3s 0 ease-in;-moz-transition:all 0.3s 0 ease-in;-o-transition:all 0.3s 0 ease-in;transition:all 0.3s 0 ease-in}.invisible{opacity:0}

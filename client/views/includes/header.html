@@ -1,11 +1,17 @@
 <template name="header">
-	<header class="site-header">
-    <h5><a href="/">GTHR @ 229 Creative</a></h5>
+	<div class="outer-wrap">
+	<header class="site-header wrap">
+		<div class="grid">
+			<div class="unit one-of-two">
+    <h1 class="site-title"><a href="/">GTHR @ 229Creative</a></h1>
     <a href="{{aboutPagePath}}">About</a>
-
+    	</div> <!--  .one-of-two -->
+		<div class="unit one-of-two">
 		<div class="login-wrap">
 					{{loginButtons}}
     </div> <!--  .login-wrap -->
-
+    </div> <!--  .two-of-two -->
+		</div> <!--  .grid -->
   </header>
+  </div> <!--  .outer-wrap -->
 </template>

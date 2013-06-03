@@ -1,8 +1,13 @@
 Template.messageSingle.helpers({
 	niceSubmitted: function() {
 		var rawDate= moment(this.submitted);
-		var niceDate = rawDate.format("H:mm DD/MM/YY");
+		var niceDate = rawDate.format("h:mma DD/MM/YY");
 		return niceDate;
+	},
+	ownsPostClass: function() {
+		if(this.userId==Meteor.userId()) {
+			return "owns-post";
+		}
 	}
 });
 

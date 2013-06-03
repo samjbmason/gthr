@@ -1,19 +1,23 @@
 <template name="messagesList">
-	<div class="conversations">
-		{{#if messagesReady}}
-      {{#unless allMessagesLoaded}}
-        <a class="load-more" href="#">Load more</a>
-      {{/unless}}
-    {{else}}
-      <div>{{> spinner}}</div>
-    {{/if}}
+  
+  <div class="pure-u-4-5">
+  	<div class="conversations">
+  		{{#if messagesReady}}
+        {{#unless allMessagesLoaded}}
+          <a class="load-more" href="#">Load more</a>
+        {{/unless}}
+      {{else}}
+        <div>{{> spinner}}</div>
+      {{/if}}
 
-		{{#each messages}}
-      {{> messageSingle}}
-    {{/each}}
-	</div> <!--  .conversations -->
+  		{{#each messages}}
+        {{> messageSingle}}
+      {{/each}}
+  	</div> <!--  .conversations -->
 
-	<div class="entry-box">
-		{{> messageEntry}}
-	</div> <!--  .entry-box -->
+  	<div class="entry-box">
+  		{{> messageEntry}}
+  	</div> <!--  .entry-box -->
+  </div> <!--  .pure-u-45 -->
+
 </template>

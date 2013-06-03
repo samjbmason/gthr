@@ -1,6 +1,10 @@
 <template name="presenceList">
-	<h1>{{onlineCount}}</h1>
-	{{#each onlineUsers}}
-		{{> presenceSingle}}
-	{{/each}}
+	
+	<div class="pure-u-1-5">
+		<h1>{{onlineCount}}</h1>
+		{{#each onlineUsers}}
+			{{> presenceSingle}}
+		{{/each}}
+	</div> <!--  .pure-u-1-5 -->
+
 </template>

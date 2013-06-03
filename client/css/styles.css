@@ -20,4 +20,11 @@ body {
 	position: absolute;
 }
 
+/*-- Message Box --*/
+
+.conversations {
+	max-height: 650px;
+	overflow: auto;
+}
+
 

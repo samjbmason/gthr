@@ -24,5 +24,9 @@ Template.messageEntry.events({
 
 	}
 
-	
 });
+
+Template.messageEntry.rendered = function(){
+	$('.entry-field').autosize({append: "\n"});
+};   
+

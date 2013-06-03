@@ -1,6 +1,8 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
+	background: #edece4;
+	color: #242628;
 }
 
 .wrap {
@@ -20,6 +22,10 @@ body {
 	position: absolute;
 }
 
+.site-title {
+	font-weight: 300;
+}
+
 /*-- Message Box --*/
 
 .conversations {
@@ -27,4 +33,100 @@ body {
 	overflow: auto;
 }
 
+.single-message {
+	border-bottom: 1px solid #edece4;
+	padding-bottom: 5px;
+}
 
+.name {
+	font-size: 12px;
+	font-weight: 700;
+	margin-bottom: 0;
+}
+
+.posted-on {
+	font-size: 12px;
+}
+
+.owns-post {
+
+}
+
+/*-- Message entry --*/
+
+.message-submit fieldset {
+	border: none;
+	padding: 0;
+}
+
+.entry-label {
+	display: inline-block;
+}
+
+.entry-field {
+	clear: both;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	max-width: 100%;
+	outline: none;
+	resize: vertical;
+	font-family: 'Open Sans', sans-serif;
+	min-height: 80px;
+	background: #F4F5F7;
+	border: none;
+	border-radius: 2px;
+	padding: 5px;
+	-webkit-transition: height 0.2s ease-out;
+     -moz-transition: height 0.2s ease-out;
+       -o-transition: height 0.2s ease-out;  
+             transition: all 0.2s ease-out; 
+}
+
+.submit-btn {
+	background: #9EC14A;
+	color: #fff;
+	float: right;
+	border: none;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	padding: 8px 18px;
+	border-radius: 2px;
+	-webkit-box-shadow:  0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+          box-shadow:  0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+	-webkit-transition: all 0.3s ease-out;  
+     -moz-transition: all 0.3s ease-out; 
+       -o-transition: all 0.3s ease-out;  
+          transition: all 0.3s ease-out; 
+}
+
+.submit-btn:hover {
+	background: #8cae3b;
+	-webkit-box-shadow:  0px 0px 0px 0px transparent;
+          box-shadow:  0px 0px 0px 0px transparent;
+}
+
+
+/*-- Header styles --*/
+
+.full-width-header {
+	background: #565d64;
+	margin-bottom: 20px;
+}
+
+.site-header .pure-menu.pure-menu-open, .site-header .pure-menu.pure-menu-horizontal li .pure-menu-children {
+	background: transparent;
+}
+
+.pure-menu-heading h1, .site-header .pure-menu a {
+	color: #fff;
+}
+
+
+
+.l-box {
+	margin: 10px;
+	padding: 10px;
+	background: #fff;
+}

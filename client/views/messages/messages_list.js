@@ -1,6 +1,6 @@
 Template.messagesList.helpers({
 	messages: function() {
-		return Messages.find({}, {sort: {submitted: 1},limit: messagesHandle.limit()});
+		return Messages.find({}, {sort: {submitted: -1},limit: messagesHandle.limit()});
 	},
 	messagesReady: function() {
 		return ! messagesHandle.loading();

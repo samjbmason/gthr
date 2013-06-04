@@ -4,9 +4,9 @@ Template.messageSingle.helpers({
 		var niceDate = rawDate.format("h:mma DD/MM/YY");
 		return niceDate;
 	},
-	ownsPostClass: function() {
+	ownsPost: function() {
 		if(this.userId==Meteor.userId()) {
-			return "owns-post";
+			return true;
 		}
 	}
 });

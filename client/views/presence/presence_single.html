@@ -1,5 +1,10 @@
 <template name="presenceSingle">
 	<li>
-		<p>{{this}}</p>
+		<p>{{#if isYou}}you{{else}}{{username}}{{/if}}
+  {{#if isOnline}}
+    is Online!
+  {{else}}
+    is not online..
+  {{/if}}</p>
 	</li>
 </template>

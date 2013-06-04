@@ -1,10 +1,14 @@
 <template name="presenceSingle">
+
 	<li>
-		<p>{{#if isYou}}you{{else}}{{username}}{{/if}}
-  {{#if isOnline}}
-    is Online!
-  {{else}}
-    is not online..
-  {{/if}}</p>
+		<p class="username">
+			{{#if isYou}}
+				you
+			{{else}}
+				{{username}}
+			{{/if}}
+			<span class="indicator{{#if isOnline}} is-online{{/if}}"></span>
+  </p>
 	</li>
+
 </template>

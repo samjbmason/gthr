@@ -1,13 +1,40 @@
 @font-face {
-    font-family: 'entypo-web';
-    src: url('fonts/Entypo-webfont.eot');
-    src: url('fonts/Entypo-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Entypo-webfont.woff') format('woff'),
-         url('fonts/Entypo-webfont.ttf') format('truetype'),
-         url('fonts/Entypo-webfont.svg#EntypoRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'fontello';
+  src: url('/fonts/fontello.eot?98991264');
+  src: url('/fonts/fontello.eot?98991264#iefix') format('embedded-opentype'),
+       url('/fonts/fontello.woff?98991264') format('woff'),
+       url('/fonts/fontello.ttf?98991264') format('truetype'),
+       url('/fonts/fontello.svg?98991264#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+}
+ 
+.icon-twitter:before { content: '\e805'; } /* '' */
+.icon-github-circled:before { content: '\e804'; } /* '' */
+.icon-pencil:before { content: '\e801'; } /* '' */
+.icon-cancel:before { content: '\e802'; } /* '' */
+.icon-chat:before { content: '\e800'; } /* '' */
 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -15,6 +42,7 @@ body {
 	background: #edece4;
 	color: #80716c;
 }
+
 
 .wrap {
 	max-width: 1000px;

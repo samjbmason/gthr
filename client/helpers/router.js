@@ -10,7 +10,7 @@ Meteor.Router.filters({
     else if (Meteor.loggingIn())
       return 'loading';
     else
-      return 'loggedOut';
+      return 'frontPage';
   },
   'clearErrors': function(page) {
     clearErrors();

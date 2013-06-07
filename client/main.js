@@ -10,5 +10,7 @@ Meteor.startup(function () {
 Handlebars.registerHelper("isFrontPage", function() {
 	if(Meteor.Router.page()=='frontPage') {
   	return 'front-page';
+	} else {
+		return 'inner-page';
 	}
 });

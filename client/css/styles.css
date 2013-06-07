@@ -43,18 +43,56 @@ body {
 	color: #80716c;
 }
 
+.logo-font {
+	font-family: 'Nixie One', cursive;
+}
+
 
 .wrap {
 	max-width: 1000px;
 	margin: 0 auto;
-	padding-top: 20px;
+}
+
+.inner-page {
+	margin-bottom: 60px;
+}
+
+.centered {
+	text-align: center;
+}
+
+.edge-padding {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.icon-chat {
+	color: #a1dae5;
 }
 
 .front-page {
-	background: url(/img/bg.jpg) no-repeat;
+	background: url(/img/bg_new.jpg) no-repeat center top;
 	background-size: cover;
 	max-width: 100%;
-	min-height: 800px;
+	padding-top: 20px;
+	color: #fff;
+	text-align: center;
+	padding-bottom: 60px;
+}
+
+.front-page-copy {
+	font-size: 18px;
+}
+
+.front-page-copy a {
+	color: #a1dae5;
+	font-weight: 400;
+}
+
+.site-name {
+	text-align: center;
+	font-size: 100px;
+	margin-top: 0px;
 }
 
 a {
@@ -246,7 +284,7 @@ a,#login-buttons-logout,#login-buttons-open-change-password {
 	min-height: 80px;
 	background: #F4F5F7;
 	border: none;
-	border-radius: 2px;
+	border-radius: 3px;
 	padding: 5px;
 	-webkit-transition: height 0.2s ease-out;
      -moz-transition: height 0.2s ease-out;
@@ -266,7 +304,7 @@ a,#login-buttons-logout,#login-buttons-open-change-password {
 	font-weight: 400;
 	text-transform: uppercase;
 	text-align: center;
-	border-radius: 2px;
+	border-radius: 3px;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 	-webkit-transition: all 0.2s ease-out;  
@@ -285,6 +323,8 @@ a,#login-buttons-logout,#login-buttons-open-change-password {
 
 .full-width-header {
 	background: #565d64;
+	position: relative;
+	z-index: 200;
 }
 
 .site-header .pure-menu.pure-menu-open, .site-header .pure-menu.pure-menu-horizontal li .pure-menu-children {
@@ -323,11 +363,21 @@ a,#login-buttons-logout,#login-buttons-open-change-password {
 	margin: 10px;
 	padding: 10px;
 	background: #fff;
+	border-radius: 3px;
 	box-shadow: rgba(0,0,0,0.05) 0 1px 5px;
 }
 
 .bold {
 	font-weight: 700;
+}
+
+.boxed-bg {
+	background: #61D89C;
+	border-radius: 4px;
+	padding: 2px 6px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 400;
 }
 
 /*-- Footer styles --*/
@@ -354,21 +404,29 @@ footer a {
 /*-- Front-page--*/
 
 .main-logo {
-	text-align: center;
-	color: #fff;
 	font-size: 200px;
-	margin-top: 100px;
 	display: block;
 }
 
-.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}
+.animated{
+	-webkit-animation-fill-mode:both;
+	   -moz-animation-fill-mode:both;
+	    -ms-animation-fill-mode:both;
+	     -o-animation-fill-mode:both;
+	        animation-fill-mode:both;
+	-webkit-animation-duration:1s;
+	   -moz-animation-duration:1s;
+	    -ms-animation-duration:1s;
+	     -o-animation-duration:1s;
+	        animation-duration:1s;
+}
 
 @-webkit-keyframes bounceInDown {
 	0% {
 		opacity: 0;
 		-webkit-transform: translateY(-2000px);
 	}	60% {
-		opacity: 1;
+		opacity: 0.8;
 		-webkit-transform: translateY(30px);
 	}
 	
@@ -388,7 +446,7 @@ footer a {
 	}
 	
 	60% {
-		opacity: 1;
+		opacity: 0.8;
 		-moz-transform: translateY(30px);
 	}
 	
@@ -408,7 +466,7 @@ footer a {
 	}
 	
 	60% {
-		opacity: 1;
+		opacity: 0.8;
 		-o-transform: translateY(30px);
 	}
 	
@@ -428,7 +486,7 @@ footer a {
 	}
 	
 	60% {
-		opacity: 1;
+		opacity: 0.8;
 		transform: translateY(30px);
 	}
 	
@@ -443,7 +501,49 @@ footer a {
 
 .bounceInDown {
 	-webkit-animation-name: bounceInDown;
-	-moz-animation-name: bounceInDown;
-	-o-animation-name: bounceInDown;
-	animation-name: bounceInDown;
+	   -moz-animation-name: bounceInDown;
+	     -o-animation-name: bounceInDown;
+	        animation-name: bounceInDown;
+	-webkit-animation-delay:1s;
+	   -moz-animation-delay:1s;
+	    -ms-animation-delay:1s;
+	     -o-animation-delay:1s;
+	        animation-delay:1s;
+}
+
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+@-o-keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	-moz-animation-name: fadeIn;
+	-o-animation-name: fadeIn;
+	animation-name: fadeIn;
+	-webkit-animation-delay:2s;
+	   -moz-animation-delay:2s;
+	    -ms-animation-delay:2s;
+	     -o-animation-delay:2s;
+	        animation-delay:2s;
+}
+
+
+@media only screen and (min-width: 768px) {
+
 }

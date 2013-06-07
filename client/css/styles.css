@@ -31,19 +31,21 @@
 }
  
 .icon-twitter:before { content: '\e805'; } /* '' */
-.icon-github-circled:before { content: '\e804'; } /* '' */
+.icon-github:before { content: '\e804'; } /* '' */
 .icon-pencil:before { content: '\e801'; } /* '' */
 .icon-cancel:before { content: '\e802'; } /* '' */
 .icon-chat:before { content: '\e800'; } /* '' */
+
 html {
+	background:  #edece4 url(/img/bg_new.jpg) no-repeat center top;
+	background-size: cover;
 	height: 100%;
 }
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-	background: #edece4;
 	color: #80716c;
-	height: 100%;
 }
 
 .logo-font {
@@ -73,11 +75,11 @@ body {
 	color: #a1dae5;
 }
 
+.icon-github {
+	font-size: 1.1em;
+}
+
 .front-page {
-	background: url(/img/bg_new_grad.jpg) no-repeat center top;
-	background-size: cover;
-	height: 100%;
-	max-width: 100%;
 	padding-top: 20px;
 	color: #fff;
 	text-align: center;
@@ -119,7 +121,7 @@ a,#login-buttons-logout,#login-buttons-open-change-password {
 
 .pure-menu li.nav-item a:hover {
 	background: transparent;
-	color: #8ae2b6;
+	color: #a1dae5;
 }
 
 .login-wrap {
@@ -136,6 +138,7 @@ a,#login-buttons-logout,#login-buttons-open-change-password {
 
 .accounts-dialog {
 	position: absolute;
+	right: 0;
 	background: #565d64;
 	padding: 10px;
 	color: #fff;
@@ -396,6 +399,7 @@ a,#login-buttons-logout,#login-buttons-open-change-password {
 
 footer {
 	padding: 10px 0;
+	color: #fff;
 }
 
 footer a {

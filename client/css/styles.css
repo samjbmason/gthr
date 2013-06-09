@@ -14,20 +14,13 @@
   font-style: normal;
   font-weight: normal;
   speak: none;
- 
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
- 
-  /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-     
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
- 
 }
  
 .icon-twitter:before { content: '\e805'; } /* '' */
@@ -48,22 +41,44 @@ body {
 	color: #80716c;
 }
 
-.logo-font {
-	font-family: 'Nixie One', cursive;
-}
-
+/*-- Global Styles --*/
 
 .wrap {
 	max-width: 1000px;
 	margin: 0 auto;
 }
 
-.inner-page {
-	margin-bottom: 60px;
+a {
+	text-decoration: none;
+}
+
+a,
+#login-buttons-logout,
+#login-buttons-open-change-password {
+	-webkit-transition: all 0.2s ease-out;  
+     -moz-transition: all 0.2s ease-out;  
+       -o-transition: all 0.2s ease-out;  
+          transition: all 0.2s ease-out;
+}
+
+.bold {
+	font-weight: 700;
 }
 
 .centered {
 	text-align: center;
+}
+
+.logo-font {
+	font-family: 'Nixie One', cursive;
+}
+
+.icon-github {
+	font-size: 1.1em;
+}
+
+.icon-chat {
+	color: #a1dae5;
 }
 
 .edge-padding {
@@ -71,13 +86,29 @@ body {
 	padding-right: 20px;
 }
 
-.icon-chat {
-	color: #a1dae5;
+.inner-page {
+	margin-bottom: 60px;
 }
 
-.icon-github {
-	font-size: 1.1em;
+.l-box {
+	margin: 10px;
+	padding: 10px;
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: rgba(0,0,0,0.05) 0 1px 5px;
 }
+
+.boxed-bg {
+	background: #61D89C;
+	border-radius: 3px;
+	padding: 2px 5px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+
+/*-- Front Page styles --*/
 
 .front-page {
 	padding-top: 20px;
@@ -96,22 +127,52 @@ body {
 }
 
 .site-name {
-	text-align: center;
 	font-size: 100px;
 	margin-top: 0px;
 }
 
-a {
-	text-decoration: none;
+.main-logo {
+	font-size: 200px;
+	display: block;
 }
 
-a,#login-buttons-logout,#login-buttons-open-change-password {
-	-webkit-transition: all 0.2s ease-out;  
-     -moz-transition: all 0.2s ease-out;  
-       -o-transition: all 0.2s ease-out;  
-          transition: all 0.2s ease-out;
+
+/*-- Header styles --*/
+
+.full-width-header {
+	background: #565d64;
+	position: relative;
+	z-index: 200;
 }
 
+.site-header .pure-menu.pure-menu-open,
+.site-header .pure-menu.pure-menu-horizontal li .pure-menu-children {
+	background: transparent;
+}
+
+.pure-menu-heading h1, .site-header .pure-menu a {
+	color: #fff;
+}
+
+/*-- Footer styles --*/
+
+.full-width-footer {
+	background: #565d64;
+	width: 100%;
+}
+
+footer {
+	padding: 10px 0;
+	color: #fff;
+}
+
+footer a {
+	color: #fff;
+}
+
+.align-last {
+	text-align: right;
+}
 
 
 /*--  Nav Styles --*/
@@ -255,7 +316,8 @@ a,#login-buttons-logout,#login-buttons-open-change-password {
 	display: block;
 }
 
-.owns-post .name, .owns-post .posted-on {
+.owns-post .name,
+.owns-post .posted-on {
 	text-align: right;
 }
 
@@ -271,10 +333,6 @@ a,#login-buttons-logout,#login-buttons-open-change-password {
 	margin: 0;
 	text-align: left;
 	margin-top: 5px;
-}
-
-.entry-box {
-	
 }
 
 .entry-label {
@@ -326,23 +384,6 @@ a,#login-buttons-logout,#login-buttons-open-change-password {
 
 }
 
-
-/*-- Header styles --*/
-
-.full-width-header {
-	background: #565d64;
-	position: relative;
-	z-index: 200;
-}
-
-.site-header .pure-menu.pure-menu-open, .site-header .pure-menu.pure-menu-horizontal li .pure-menu-children {
-	background: transparent;
-}
-
-.pure-menu-heading h1, .site-header .pure-menu a {
-	color: #fff;
-}
-
 /*-- Presence sidebar styles --*/
 
 .online-list {
@@ -367,55 +408,8 @@ a,#login-buttons-logout,#login-buttons-open-change-password {
 	font-size: 20px;
 }
 
-.l-box {
-	margin: 10px;
-	padding: 10px;
-	background: #fff;
-	border-radius: 3px;
-	box-shadow: rgba(0,0,0,0.05) 0 1px 5px;
-}
 
-.bold {
-	font-weight: 700;
-}
-
-.boxed-bg {
-	background: #61D89C;
-	border-radius: 3px;
-	padding: 2px 5px;
-	color: #fff;
-	font-size: 14px;
-	font-weight: 400;
-}
-
-/*-- Footer styles --*/
-
-.full-width-footer {
-	background: #565d64;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-}
-
-footer {
-	padding: 10px 0;
-	color: #fff;
-}
-
-footer a {
-	color: #fff;
-}
-
-.align-last {
-	text-align: right;
-}
-
-/*-- Front-page--*/
-
-.main-logo {
-	font-size: 200px;
-	display: block;
-}
+/*-- Animations --*/
 
 .animated{
 	-webkit-animation-fill-mode:both;
@@ -550,9 +544,4 @@ footer a {
 	    -ms-animation-delay:2s;
 	     -o-animation-delay:2s;
 	        animation-delay:2s;
-}
-
-
-@media only screen and (min-width: 768px) {
-
 }

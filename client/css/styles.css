@@ -46,7 +46,7 @@ html {
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-	color: #80716c;
+	color: #22262e;
 }
 
 /*-- Global Styles --*/
@@ -58,7 +58,7 @@ body {
 
 a {
 	text-decoration: none;
-	color: #fff;
+	color: #22262e;
 }
 
 a:hover {
@@ -154,7 +154,7 @@ a,
 /*-- Header styles --*/
 
 .full-width-header {
-	background: #565d64;
+	background: #e5e9ec;
 	position: relative;
 	z-index: 200;
 }
@@ -164,15 +164,10 @@ a,
 	background: transparent;
 }
 
-.pure-menu-heading h1, 
-.site-header .pure-menu a {
-	color: #fff;
-}
-
 /*-- Footer styles --*/
 
 .full-width-footer {
-	background: #565d64;
+	background: #e5e9ec;
 	width: 100%;
 	position: fixed;
 	bottom: 0;
@@ -180,7 +175,6 @@ a,
 
 footer {
 	padding: 10px 0;
-	color: #fff;
 }
 
 .social-btns a {
@@ -214,9 +208,8 @@ footer {
 .accounts-dialog {
 	position: absolute;
 	right: 0;
-	background: #565d64;
+	background: #e5e9ec;
 	padding: 10px;
-	color: #fff;
 	white-space: nowrap;
 }
 
@@ -279,6 +272,7 @@ footer {
 #login-buttons-open-change-password,
 #login-buttons-logout {
 	background: #a1dae5;
+	color: #fff;
 	text-align: center;
 	border-radius: 2px;
 	padding: 4px 16px;
@@ -307,6 +301,7 @@ footer {
 #signup-link,
 #back-to-login-link {
 	background: #61D89C;
+	color: #fff;
 	text-align: center;
 	border-radius: 2px;
 	border: none;

@@ -1,4 +1,4 @@
-if (Messages.find().count() === 2) {
+if (Messages.find().count() === 400) {
   var now = new Date().getTime();
 
   var tomId = Meteor.users.insert({

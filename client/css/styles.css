@@ -29,10 +29,18 @@
 .icon-cancel:before { content: '\e802'; } /* '' */
 .icon-chat:before { content: '\e800'; } /* '' */
 
+* {
+	box-sizing: border-box;
+}
+
 html {
 	background:  #edece4 url(/img/bg_new.jpg) no-repeat center top;
 	background-size: cover;
 	height: 100%;
+}
+
+.bg-2 {
+	background-image: url(/img/bg_2.jpg);
 }
 
 body {
@@ -50,6 +58,11 @@ body {
 
 a {
 	text-decoration: none;
+	color: #fff;
+}
+
+a:hover {
+	color: #a1dae5;
 }
 
 a,
@@ -71,6 +84,7 @@ a,
 
 .logo-font {
 	font-family: 'Nixie One', cursive;
+	font-weight: 300;
 }
 
 .icon-github {
@@ -87,7 +101,7 @@ a,
 }
 
 .inner-page {
-	margin-bottom: 60px;
+	padding-bottom: 60px;
 }
 
 .l-box {
@@ -128,7 +142,7 @@ a,
 
 .site-name {
 	font-size: 100px;
-	margin-top: 0px;
+	margin: 0 0 50px;
 }
 
 .main-logo {
@@ -150,7 +164,8 @@ a,
 	background: transparent;
 }
 
-.pure-menu-heading h1, .site-header .pure-menu a {
+.pure-menu-heading h1, 
+.site-header .pure-menu a {
 	color: #fff;
 }
 
@@ -159,6 +174,8 @@ a,
 .full-width-footer {
 	background: #565d64;
 	width: 100%;
+	position: fixed;
+	bottom: 0;
 }
 
 footer {
@@ -166,8 +183,8 @@ footer {
 	color: #fff;
 }
 
-footer a {
-	color: #fff;
+.social-btns a {
+	margin-right: 5px;
 }
 
 .align-last {
@@ -176,9 +193,6 @@ footer a {
 
 
 /*--  Nav Styles --*/
-.site-title {
-	font-weight: 300;
-}
 
 .pure-menu li.nav-item a:hover {
 	background: transparent;
@@ -238,10 +252,6 @@ footer a {
 	color: #ef6957;
 }
 
-#login-buttons-open-change-password:hover {
-	color: #8ae2b6;
-}
-
 .accounts-dialog label {
 	clear: both;
 	display: block;
@@ -259,27 +269,19 @@ footer a {
 	padding: 0 2px;
 }
 
-.login-button-form-submit {
+.accounts-dialog .error-message {
+	color: #ef6957;
+	font-size: 12px;
+	white-space: normal;
+}
+
+.login-button-form-submit,
+#login-buttons-open-change-password,
+#login-buttons-logout {
 	background: #a1dae5;
 	text-align: center;
 	border-radius: 2px;
-	padding: 4px 0;
-	cursor: pointer;
-	-webkit-transition: all 0.2s ease-out;  
-     -moz-transition: all 0.2s ease-out;  
-       -o-transition: all 0.2s ease-out;  
-          transition: all 0.2s ease-out;
-}
-
-.login-button-form-submit:hover {
-	background: #bce4ec;
-}
-
-#signup-link {
-	background: #61D89C;
-	text-align: center;
-	border-radius: 2px;
-	padding: 4px 0;
+	padding: 4px 16px;
 	cursor: pointer;
 	margin-top: 5px;
 	-webkit-transition: all 0.2s ease-out;  
@@ -288,7 +290,38 @@ footer a {
           transition: all 0.2s ease-out;
 }
 
-#signup-link:hover {
+.login-button-form-submit:hover,
+#login-buttons-open-change-password:hover {
+	background: #bce4ec;
+}
+
+#login-buttons-logout {
+	background: #ef6957;
+}
+
+#login-buttons-logout:hover {
+	color: #fff;
+	background: #f28576;
+}
+
+#signup-link,
+#back-to-login-link {
+	background: #61D89C;
+	text-align: center;
+	border-radius: 2px;
+	border: none;
+	padding: 4px 0;
+	cursor: pointer;
+	display: block;
+	margin-top: 10px;
+	-webkit-transition: all 0.2s ease-out;  
+     -moz-transition: all 0.2s ease-out;  
+       -o-transition: all 0.2s ease-out;  
+          transition: all 0.2s ease-out;
+}
+
+#signup-link:hover,
+#back-to-login-link:hover {
 	color: #fff;
 	background: #8ae2b6;
 }
@@ -316,13 +349,13 @@ footer a {
 	display: block;
 }
 
-.owns-post .name,
-.owns-post .posted-on {
-	text-align: right;
+.owns-post .name {
+ color: #a1dae5;
 }
 
-.message-content {
+.message-content p {
 	font-size: 18px;
+	margin-bottom: 0;
 }
 
 /*-- Message entry --*/
@@ -408,6 +441,12 @@ footer a {
 	font-size: 20px;
 }
 
+/*-- About page --*/
+
+.smaller {
+	font-size: 60px;
+	margin-bottom: 20px;
+}
 
 /*-- Animations --*/
 

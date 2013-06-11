@@ -3,7 +3,6 @@
     "router": {},
     "spin": {},
     "paginated-subscription": {},
-    "presence": {},
-    "scss": {}
+    "presence": {}
   }
 }

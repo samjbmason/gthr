@@ -1,6 +1,7 @@
 Meteor.Router.add({
   '/': 'chatPage',
-  '/about': 'aboutPage'
+  '/about': 'aboutPage',
+  '/settings': 'settingsPage'
 });
 
 Meteor.Router.filters({
@@ -11,12 +12,7 @@ Meteor.Router.filters({
       return 'loading';
     else
       return 'frontPage';
-  },
-  'clearErrors': function(page) {
-    clearErrors();
-    return page;
   }
 });
 
-Meteor.Router.filter('requireLogin', {only: 'chatPage'});
-Meteor.Router.filter('clearErrors');
+Meteor.Router.filter('requireLogin', {only: ['chatPage','settings']});

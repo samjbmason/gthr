@@ -1,14 +1,21 @@
 <template name="errors">
-  <div class="errors">    
+
+  <div class="errors wrap">
     {{#each errors}}
       {{> error}}
     {{/each}}
   </div>
+
 </template>
 
 <template name="error">
-  <div class="alert-error">
-    <button type="button" class="close">&times;</button>
-    {{message}}
-  </div>
+	
+	<div class="pure-g-r js-hide-after">
+		<div class="l-box alert-error">
+		  <div class="pure-u-1 ">
+		    {{message}}
+		  </div>
+	  </div> <!--  .pure-1 -->
+  </div> <!--  .pure-g-r -->
+
 </template>

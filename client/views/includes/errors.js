@@ -1,5 +1,23 @@
+Errors = new Meteor.Collection(null);
+
+throwError = function(message) {
+  Errors.insert({message: message})
+}
+
 Template.errors.helpers({
   errors: function() {
     return Errors.find();
   }
 });
+
+Template.error.rendered = function() {
+	var error = this.data;
+  Meteor.setTimeout(function(){
+  	Errors.remove(error._id);
+  	},2000);
+
+	setTimeout(function(){
+		$('.js-hide-after').slideUp('fast')},1500
+	);
+
+}

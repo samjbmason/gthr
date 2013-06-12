@@ -16,7 +16,7 @@ Template.messageEntry.events({
 
 		Meteor.call('postMessage',message,function(error,id) {
 			if (error) {
-      	throwError(error.reason);
+      	 return throwError(error.reason);
       } else {
       	$(event.target).find('[name=content]').val("").focus();
     	}
@@ -28,5 +28,12 @@ Template.messageEntry.events({
 
 Template.messageEntry.rendered = function(){
 	$('.entry-field').autosize({append: "\n"});
+
+	$(".entry-field").keypress(function(event) {
+    if (event.which == 13) {
+        event.preventDefault();
+        $(".submit-btn").click();
+    }
+	});
 };   
 

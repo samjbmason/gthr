@@ -6,7 +6,7 @@ Meteor.methods({
 
     // ensure the user is logged in
     if (!user)
-      throw new Meteor.Error(401, "You need to login to post new stories");
+      throw new Meteor.Error(401, "You need to login to use the chat!");
 
     // ensure the post has content
     if (!messageAttributes.content)

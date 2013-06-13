@@ -359,6 +359,10 @@ footer {
 
 /*-- Message entry --*/
 
+.entry-box {
+	margin-bottom: 10px;
+}
+
 .message-submit fieldset {
 	border: none;
 	padding: 0;
@@ -600,5 +604,13 @@ footer {
 
 	.full-width-footer {
 		position: static;
+	}
+
+	.pure-menu-heading {
+		width: 100%;
+	}
+
+	.center-small {
+		text-align: center;
 	}
 }

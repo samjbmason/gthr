@@ -14,7 +14,6 @@ Template.messageSingle.helpers({
 Template.messageSingle.rendered = function() {
 	var instance = this;
 	var $this = $(this.firstNode);
-
 	if (typeof(instance.currentPosition) !== 'undefined') {
 		$this.addClass("oldPost");
 	} else {
@@ -24,5 +23,5 @@ Template.messageSingle.rendered = function() {
 	Meteor.defer(function() {
 		instance.currentPosition = 1;
     $this.removeClass("invisible");
-  }); 
+  });
 };

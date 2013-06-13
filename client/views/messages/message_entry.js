@@ -10,7 +10,6 @@ Template.messageEntry.events({
 
 			var rawMessage = $('form').find('[name=content]').val();
 			var prettyMessage = replaceWithLinks(rawMessage);
-
 			var message = {
 				content: prettyMessage
 			}
@@ -26,7 +25,6 @@ Template.messageEntry.events({
 	      	if(newMessage.userId!==Meteor.userId()){
 						messageNotification.show();
 					}
-
 	    	}
 			}); 
 		}

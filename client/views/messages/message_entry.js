@@ -20,11 +20,11 @@ Template.messageEntry.events({
 	      	 return throwError(error.reason);
 	      } else {
 	      	$('form').find('[name=content]').val("").focus();
-	      	var mess=Messages.findOne(id);
-	      	var myNotification = webkitNotifications.createNotification('icon.png', 'New message from '+mess.name, mess.content);
-	      	console.log(mess.userId+'---'+Meteor.userId());
-	      	if(mess.userId!==Meteor.userId()){
-						myNotification.show();
+	      	var newMessage=Messages.findOne(id);
+	      	var messageNotification = webkitNotifications.createNotification(
+	      		'icon.png', 'New message from '+newMessage.name, newMessage.content);
+	      	if(newMessage.userId!==Meteor.userId()){
+						messageNotification.show();
 					}
 
 	    	}

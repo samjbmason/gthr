@@ -1,0 +1,3 @@
+Templatre.settingsPage.events({
+
+});

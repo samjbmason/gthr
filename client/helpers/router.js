@@ -1,7 +1,6 @@
 Meteor.Router.add({
   '/': 'chatPage',
-  '/about': 'aboutPage',
-  '/settings': 'settingsPage'
+  '/about': 'aboutPage'
 });
 
 Meteor.Router.filters({
@@ -15,4 +14,4 @@ Meteor.Router.filters({
   }
 });
 
-Meteor.Router.filter('requireLogin', {only: ['chatPage','settings']});
+Meteor.Router.filter('requireLogin', {only: 'chatPage'});

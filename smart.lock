@@ -5,7 +5,8 @@
       "router": {},
       "spin": {},
       "paginated-subscription": {},
-      "presence": {}
+      "presence": {},
+      "crypto-md5": {}
     },
     "packages": {
       "router": {
@@ -20,18 +21,28 @@
       },
       "paginated-subscription": {
         "git": "https://github.com/tmeasday/meteor-paginated-subscription.git",
-        "tag": "v0.1.1",
-        "commit": "1ba670364ddac149f404158407b2afc89db42ce5"
+        "tag": "v0.1.2",
+        "commit": "35e0c6112df2b4cfeb60b559276a93cac5ee2dd6"
       },
       "presence": {
         "git": "https://github.com/tmeasday/meteor-presence.git",
         "tag": "v0.2.0",
         "commit": "cb103275ba67e524bf3a9cce4ff0b36f03959d1b"
       },
+      "crypto-md5": {
+        "git": "https://github.com/tmeasday/meteor-crypto-md5.git",
+        "tag": "v0.0.1",
+        "commit": "a0638a6cabfc84e19f2d5828f76aa8f6a0cc8c1a"
+      },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
         "tag": "v1.3.5",
         "commit": "b99ed8380aefd10b2afc8f18d9eed4dd0d8ea9cb"
+      },
+      "crypto-base": {
+        "git": "https://github.com/tmeasday/meteor-crypto-base.git",
+        "tag": "v0.0.2",
+        "commit": "f0dceae8493cabfff06af60bbeb11223d36fdae8"
       }
     }
   }

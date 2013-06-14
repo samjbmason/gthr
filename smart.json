@@ -3,6 +3,7 @@
     "router": {},
     "spin": {},
     "paginated-subscription": {},
-    "presence": {}
+    "presence": {},
+    "crypto-md5": {}
   }
 }

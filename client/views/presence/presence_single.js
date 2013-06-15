@@ -10,10 +10,10 @@ Template.presenceSingle.helpers({
   	}
   },
   avatar: function() {
-  	user= Meteor.user();
+  	user= Meteor.users.findOne(this._id);
   	email= user.emails[0].address;
   	emailHash = CryptoJS.MD5(email);
-  	avatarUrl= 'http://www.gravatar.com/avatar/'+emailHash;
+  	avatarUrl= 'http://www.gravatar.com/avatar/'+emailHash+'?s=40&d=mm';
   	return avatarUrl;
   }
 });

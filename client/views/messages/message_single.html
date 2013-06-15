@@ -2,7 +2,7 @@
 	<div class="single-message {{#if ownsPost}}owns-post{{/if}}" id="{{_id}}">
 		<div class="message-content">
 			
-			<p>“{{{content}}}”</p>
+			<p>{{content}}</p>
 		</div> <!--  .message-content -->
 		<p class="name">{{#if ownsPost}}you{{else}}{{name}}{{/if}}</p> <!--  .name -->
 		<time class="posted-on">{{niceSubmitted}}</time>

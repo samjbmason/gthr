@@ -42,9 +42,9 @@ body {
 
 /*-- Global Styles --*/
 .bg-wrap {
-	background: url(/img/bg_new.jpg) no-repeat top center;
+	background: url(/img/bg_new.jpg) no-repeat center -100px;
 	background-size: cover;
-	min-height: 600px;
+	min-height: 800px;
 }
 
 .wrap {
@@ -58,7 +58,7 @@ a {
 }
 
 a:hover {
-	color: #a1dae5;
+	color: #6cc5d6;
 }
 
 .invisible {
@@ -83,8 +83,8 @@ a,
 }
 
 .logo-font {
-	font-family: 'Nixie One', cursive;
-	font-weight: 300;
+	font-family: 'Amatic SC', cursive;
+	font-weight: 400;
 }
 
 .icon-github {
@@ -112,14 +112,7 @@ a,
 	box-shadow: rgba(0,0,0,0.05) 0 1px 5px;
 }
 
-.boxed-bg {
-	background: #61D89C;
-	border-radius: 3px;
-	padding: 2px 5px;
-	color: #fff;
-	font-size: 14px;
-	font-weight: 400;
-}
+
 
 /*-- Flash styles --*/
 .l-box.alert-error {
@@ -137,12 +130,13 @@ a,
 }
 
 .front-page-copy {
-	font-size: 18px;
+	font-size: 20px;
+	color: #fff;
 }
 
 .front-page-copy a {
-	color: #a1dae5;
-	font-weight: 400;
+	color: #6cc5d6;
+	font-weight: 700;
 }
 
 .site-name {
@@ -151,16 +145,17 @@ a,
 }
 
 .large-font .site-name {
-	font-size: 100px;
+	font-size: 150px;
+	color: #fff;
 }
 
 .large-font .main-logo {
-	font-size: 200px;
+	font-size: 180px;
 }
 
 .main-logo {
 	display: inline-block;
-	vertical-align: middle;
+	
 }
 
 .no-margin {
@@ -173,6 +168,7 @@ a,
 
 /*-- Header styles --*/
 .site-title {
+	font-size: 2.5em;
 	margin: .5em 0;
 }
 .full-width-header {
@@ -194,18 +190,20 @@ a,
 /*-- Footer styles --*/
 
 .full-width-footer {
-	background: #fff;
+	background-color: #fff;
 	width: 100%;
 	position: fixed;
 	bottom: 0;
 }
 
 footer {
-	padding: 10px 0;
+	padding: 5px 0;
+	font-size: 22px;
 }
 
 .social-btns a {
 	margin-right: 5px;
+	font-size: 18px;
 }
 
 .align-last {
@@ -217,7 +215,7 @@ footer {
 
 .pure-menu li.nav-item a:hover {
 	background: transparent;
-	color: #a1dae5;
+	color: #6cc5d6;
 }
 
 .login-wrap {
@@ -298,7 +296,7 @@ footer {
 .login-button-form-submit,
 #login-buttons-open-change-password,
 #login-buttons-logout {
-	background: #a1dae5;
+	background: #6cc5d6;
 	color: #fff;
 	text-align: center;
 	border-radius: 2px;
@@ -313,7 +311,7 @@ footer {
 
 .login-button-form-submit:hover,
 #login-buttons-open-change-password:hover {
-	background: #bce4ec;
+	background: #a1dae5;
 }
 
 #login-buttons-logout {
@@ -368,6 +366,7 @@ footer {
 	font-size: 13px;
 	font-weight: 700;
 	margin-bottom: 0;
+	margin-top: 5px;
 }
 
 .posted-on {
@@ -376,7 +375,7 @@ footer {
 }
 
 .owns-post .name {
- color: #a1dae5;
+ color: #6cc5d6;
 }
 
 .message-content p {
@@ -395,11 +394,11 @@ footer {
 	padding: 0;
 	margin: 0;
 	text-align: left;
-	margin-top: 5px;
 }
 
 .entry-label {
 	display: inline-block;
+	font-size: 26px;
 }
 
 .entry-field {
@@ -467,9 +466,20 @@ footer {
 .indicator.is-online {
 	background: #61D89C;
 }
+
 .online-count {
-	font-weight: 300;
+	font-size: 26px;
+	margin-top: 0;
+}
+
+.boxed-bg {
+	background: #61D89C;
+	border-radius: 3px;
+	padding: 2px 5px;
+	color: #fff;
 	font-size: 20px;
+	margin-left: 5px;
+	vertical-align: middle;
 }
 
 .avatar {
@@ -480,8 +490,13 @@ footer {
 /*-- About page --*/
 
 .smaller {
-	font-size: 60px;
+	font-size: 80px;
 	margin-bottom: 20px;
+	margin-top: 50px;
+}
+
+.translucent {
+	background-color: rgba(255,255,255,0.8);
 }
 
 /*-- Notification button --*/
